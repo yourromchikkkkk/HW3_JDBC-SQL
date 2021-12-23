@@ -40,8 +40,8 @@ public class Main {
         for (User val : users) {
             System.out.println(val);
         }
-
-
+        
+        dbSelection.closeDBSelection();
 
     }
 }
