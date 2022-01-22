@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 
 public class Main {
-    public static String URL = "jdbc:mysql://localhost:3306/dbtest";
+    public static String URL = "jdbc:mysql://localhost:3306/dbtest?serverTimezone=UTC";
     public static String USERNAME = "admin";
     public static String PASSWORD = "29.11.2002";
 
@@ -40,8 +40,6 @@ public class Main {
         for (User val : users) {
             System.out.println(val);
         }
-        
-        dbSelection.closeDBSelection();
 
     }
 }
