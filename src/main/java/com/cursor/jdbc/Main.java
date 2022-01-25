@@ -1,16 +1,9 @@
 package com.cursor.jdbc;
 
-import com.microsoft.sqlserver.jdbc.SQLServerDriver;
-
-
-import java.sql.*;
 import java.util.ArrayList;
 
 
 public class Main {
-    public static String URL = "jdbc:mysql://localhost:3306/dbtest?serverTimezone=UTC";
-    public static String USERNAME = "admin";
-    public static String PASSWORD = "29.11.2002";
 
     public static void main(String[] args) {
         DBSelection dbSelection = new DBSelection();
