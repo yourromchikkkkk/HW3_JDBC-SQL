@@ -83,11 +83,11 @@ public class DBSelection {
         final String sql = "SELECT\n" +
                 "    cities.id as city_id, cities.city_name as city_name, cities.country_id as city_country_id\n" +
                 "FROM cities\n" +
-                "INNER JOIN countries ON countries.id=cities.country_id where country_id = ?;";
+                "INNER JOIN countries ON countries.id=cities.country_id where country_name = ?;";
         try (
                 final PreparedStatement preparedStatement = getConnection().prepareStatement(sql);
                 ) {
-            preparedStatement.setInt(1, getIdByCountryName(countryName));
+            preparedStatement.setString(1, countryName);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 cities.add(new City(resultSet.getInt("city_id"),
